@@ -17,6 +17,12 @@
 		FCE728F61AD078BE006B95C8 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE728F51AD078BE006B95C8 /* DetailViewController.m */; };
 		FCE728F91AD07973006B95C8 /* ViewTableViewDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE728F81AD07973006B95C8 /* ViewTableViewDatasource.m */; };
 		FCE728FC1AD07981006B95C8 /* DetailTableviewDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE728FB1AD07981006B95C8 /* DetailTableviewDatasource.m */; };
+		FCE728FF1AD07EF4006B95C8 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE728FE1AD07EF4006B95C8 /* Stack.m */; };
+		FCE729021AD07F48006B95C8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE729001AD07F19006B95C8 /* CoreData.framework */; };
+		FCE729051AD07F81006B95C8 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FCE729031AD07F81006B95C8 /* Model.xcdatamodeld */; };
+		FCE729081AD080B0006B95C8 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE729071AD080AF006B95C8 /* Player.m */; };
+		FCE7290B1AD080B0006B95C8 /* Coach.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE7290A1AD080B0006B95C8 /* Coach.m */; };
+		FCE7290E1AD0914D006B95C8 /* CoachController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE7290D1AD0914D006B95C8 /* CoachController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,16 @@
 		FCE728F81AD07973006B95C8 /* ViewTableViewDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewTableViewDatasource.m; sourceTree = "<group>"; };
 		FCE728FA1AD07981006B95C8 /* DetailTableviewDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTableviewDatasource.h; sourceTree = "<group>"; };
 		FCE728FB1AD07981006B95C8 /* DetailTableviewDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTableviewDatasource.m; sourceTree = "<group>"; };
+		FCE728FD1AD07EF4006B95C8 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
+		FCE728FE1AD07EF4006B95C8 /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
+		FCE729001AD07F19006B95C8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		FCE729041AD07F81006B95C8 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		FCE729061AD080AF006B95C8 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		FCE729071AD080AF006B95C8 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		FCE729091AD080B0006B95C8 /* Coach.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Coach.h; sourceTree = "<group>"; };
+		FCE7290A1AD080B0006B95C8 /* Coach.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Coach.m; sourceTree = "<group>"; };
+		FCE7290C1AD0914D006B95C8 /* CoachController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoachController.h; sourceTree = "<group>"; };
+		FCE7290D1AD0914D006B95C8 /* CoachController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoachController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCE729021AD07F48006B95C8 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +89,7 @@
 		FCE728C21AD071A8006B95C8 = {
 			isa = PBXGroup;
 			children = (
+				FCE729001AD07F19006B95C8 /* CoreData.framework */,
 				FCE728CD1AD071A8006B95C8 /* TeamContactsList */,
 				FCE728E71AD071A8006B95C8 /* TeamContactsListTests */,
 				FCE728CC1AD071A8006B95C8 /* Products */,
@@ -90,6 +108,8 @@
 		FCE728CD1AD071A8006B95C8 /* TeamContactsList */ = {
 			isa = PBXGroup;
 			children = (
+				FCE728FD1AD07EF4006B95C8 /* Stack.h */,
+				FCE728FE1AD07EF4006B95C8 /* Stack.m */,
 				FCE728D21AD071A8006B95C8 /* AppDelegate.h */,
 				FCE728D31AD071A8006B95C8 /* AppDelegate.m */,
 				FCE728D51AD071A8006B95C8 /* ViewController.h */,
@@ -100,6 +120,13 @@
 				FCE728F51AD078BE006B95C8 /* DetailViewController.m */,
 				FCE728FA1AD07981006B95C8 /* DetailTableviewDatasource.h */,
 				FCE728FB1AD07981006B95C8 /* DetailTableviewDatasource.m */,
+				FCE729031AD07F81006B95C8 /* Model.xcdatamodeld */,
+				FCE729091AD080B0006B95C8 /* Coach.h */,
+				FCE7290A1AD080B0006B95C8 /* Coach.m */,
+				FCE7290C1AD0914D006B95C8 /* CoachController.h */,
+				FCE7290D1AD0914D006B95C8 /* CoachController.m */,
+				FCE729061AD080AF006B95C8 /* Player.h */,
+				FCE729071AD080AF006B95C8 /* Player.m */,
 				FCE728D81AD071A8006B95C8 /* Main.storyboard */,
 				FCE728DB1AD071A8006B95C8 /* Images.xcassets */,
 				FCE728DD1AD071A8006B95C8 /* LaunchScreen.xib */,
@@ -235,10 +262,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCE728F91AD07973006B95C8 /* ViewTableViewDatasource.m in Sources */,
+				FCE728FF1AD07EF4006B95C8 /* Stack.m in Sources */,
 				FCE728D71AD071A8006B95C8 /* ViewController.m in Sources */,
+				FCE729051AD07F81006B95C8 /* Model.xcdatamodeld in Sources */,
+				FCE7290B1AD080B0006B95C8 /* Coach.m in Sources */,
 				FCE728D41AD071A8006B95C8 /* AppDelegate.m in Sources */,
+				FCE7290E1AD0914D006B95C8 /* CoachController.m in Sources */,
 				FCE728FC1AD07981006B95C8 /* DetailTableviewDatasource.m in Sources */,
 				FCE728D11AD071A8006B95C8 /* main.m in Sources */,
+				FCE729081AD080B0006B95C8 /* Player.m in Sources */,
 				FCE728F61AD078BE006B95C8 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,6 +462,7 @@
 				FCE728F01AD071A8006B95C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FCE728F11AD071A8006B95C8 /* Build configuration list for PBXNativeTarget "TeamContactsListTests" */ = {
 			isa = XCConfigurationList;
@@ -438,8 +471,22 @@
 				FCE728F31AD071A8006B95C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FCE729031AD07F81006B95C8 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FCE729041AD07F81006B95C8 /* Model.xcdatamodel */,
+			);
+			currentVersion = FCE729041AD07F81006B95C8 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FCE728C31AD071A8006B95C8 /* Project object */;
 }

@@ -28,7 +28,7 @@
 }
 
 - (void)addPlayerPressed {
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Player information" message:nil preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Player Information" message:nil preferredStyle:UIAlertControllerStyleAlert];
     
     [alert addTextFieldWithConfigurationHandler:^(UITextField *textField) {
         textField.placeholder = @"player name";
