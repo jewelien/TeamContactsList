@@ -23,6 +23,7 @@
 		FCE729081AD080B0006B95C8 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE729071AD080AF006B95C8 /* Player.m */; };
 		FCE7290B1AD080B0006B95C8 /* Coach.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE7290A1AD080B0006B95C8 /* Coach.m */; };
 		FCE7290E1AD0914D006B95C8 /* CoachController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE7290D1AD0914D006B95C8 /* CoachController.m */; };
+		FCE729111AD0A91B006B95C8 /* PlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE729101AD0A91B006B95C8 /* PlayerController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,8 @@
 		FCE7290A1AD080B0006B95C8 /* Coach.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Coach.m; sourceTree = "<group>"; };
 		FCE7290C1AD0914D006B95C8 /* CoachController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoachController.h; sourceTree = "<group>"; };
 		FCE7290D1AD0914D006B95C8 /* CoachController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoachController.m; sourceTree = "<group>"; };
+		FCE7290F1AD0A91B006B95C8 /* PlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerController.h; sourceTree = "<group>"; };
+		FCE729101AD0A91B006B95C8 /* PlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +130,8 @@
 				FCE7290D1AD0914D006B95C8 /* CoachController.m */,
 				FCE729061AD080AF006B95C8 /* Player.h */,
 				FCE729071AD080AF006B95C8 /* Player.m */,
+				FCE7290F1AD0A91B006B95C8 /* PlayerController.h */,
+				FCE729101AD0A91B006B95C8 /* PlayerController.m */,
 				FCE728D81AD071A8006B95C8 /* Main.storyboard */,
 				FCE728DB1AD071A8006B95C8 /* Images.xcassets */,
 				FCE728DD1AD071A8006B95C8 /* LaunchScreen.xib */,
@@ -271,6 +276,7 @@
 				FCE728FC1AD07981006B95C8 /* DetailTableviewDatasource.m in Sources */,
 				FCE728D11AD071A8006B95C8 /* main.m in Sources */,
 				FCE729081AD080B0006B95C8 /* Player.m in Sources */,
+				FCE729111AD0A91B006B95C8 /* PlayerController.m in Sources */,
 				FCE728F61AD078BE006B95C8 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

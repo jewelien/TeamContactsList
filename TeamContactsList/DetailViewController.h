@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Coach.h"
 
 @interface DetailViewController : UIViewController
+@property (nonatomic, strong) UITableView *tableView;
+
+@property (nonatomic, strong) Coach *coach;
+
+- (void)updateWithCoach:(Coach *)coach;
 
 @end

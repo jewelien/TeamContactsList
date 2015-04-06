@@ -8,15 +8,20 @@
 
 #import <Foundation/Foundation.h>
 #import "Coach.h"
+#import "Player.h"
 
 @interface CoachController : NSObject
 
 @property (nonatomic, strong) NSArray *coaches;
 
++ (CoachController *)sharedInstance;
 -(void)addTeamWithCoach:(NSString *)coachName phone:(NSString *)coachPhone email:(NSString *)coachEmail;
 
 -(void)removeCoach:(Coach *)coach;
 
 -(void)saveToCoreData;
+
+//-(void)addPlayer:(Player *)player;
+
 
 @end

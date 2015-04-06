@@ -8,10 +8,11 @@
 
 #import "DetailViewController.h"
 #import "DetailTableviewDatasource.h"
+#import "PlayerController.h"
 
 @interface DetailViewController ()
 
-@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) DetailTableviewDatasource *datasource;
 
 @end
 
@@ -20,11 +21,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    self.title = self.coach.name;
+    
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
+    self.datasource = [DetailTableviewDatasource new];
+    self.tableView.dataSource = self.datasource;
+    [self.datasource registerTableView:self.tableView];
     [self.view addSubview:self.tableView];
     
     UIBarButtonItem *addPlayerButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addPlayerPressed)];
     self.navigationItem.rightBarButtonItem = addPlayerButton;
+}
+
+- (void)updateWithCoach:(Coach *)coach {
+    self.coach = coach;
+    [[PlayerController sharedInstance] fetchPlayersWithCoach:coach];
+    
 }
 
 - (void)addPlayerPressed {
@@ -40,14 +53,15 @@
         textField.placeholder = @"player email";
     }];
 
-    
     UIAlertAction *action = [UIAlertAction actionWithTitle:@"done" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        [self.tableView reloadData];
+        UITextField *playerName = [[alert textFields]objectAtIndex:0];
+        UITextField *playerPhone = [[alert textFields]objectAtIndex:1];
+        UITextField *playerEmail = [[alert textFields]objectAtIndex:2];
+        [[PlayerController sharedInstance]addPlayerForCoach:self.coach playerName:playerName.text playerPhone:playerPhone.text playerEmail:playerEmail.text];
     }];
     [alert addAction:action];
     [self.navigationController presentViewController:alert animated:YES completion:nil];
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
