@@ -10,7 +10,7 @@
 #import "DetailTableviewDatasource.h"
 #import "PlayerController.h"
 
-@interface DetailViewController ()
+@interface DetailViewController () <UITableViewDelegate>
 
 @property (nonatomic, strong) DetailTableviewDatasource *datasource;
 
@@ -28,6 +28,7 @@
     self.datasource = [DetailTableviewDatasource new];
     self.tableView.dataSource = self.datasource;
     [self.datasource registerTableView:self.tableView];
+    self.tableView.delegate = self;
     [self.view addSubview:self.tableView];
     
     UIBarButtonItem *addPlayerButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addPlayerPressed)];
@@ -61,6 +62,17 @@
     }];
     [alert addAction:action];
     [self.navigationController presentViewController:alert animated:YES completion:nil];
+}
+
+-(void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"TAPPED");
+
+    Player *player = [PlayerController sharedInstance].players[indexPath.row];
+    UILabel *emailLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 300, 200, 50)];
+    emailLabel.backgroundColor = [UIColor grayColor];
+    emailLabel.text = player.email;
+    [self.view addSubview:emailLabel];
+    NSLog(@"%@", emailLabel);
 }
 
 - (void)didReceiveMemoryWarning {

@@ -30,12 +30,13 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UITableViewCell class])];
     if (cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:NSStringFromClass([UITableViewCell class])];
+        cell.accessoryType = UITableViewCellAccessoryDetailButton;
     }
-    
     Player *player = [PlayerController sharedInstance].players[indexPath.row];
     cell.textLabel.text = [NSString stringWithFormat:@"%@",player.name];
     cell.detailTextLabel.text = player.phone;
     return cell;
+
 }
 
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
